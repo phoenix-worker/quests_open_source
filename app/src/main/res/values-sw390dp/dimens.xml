@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text -->
+    <dimen name="textSizeTiniest">12sp</dimen>
+    <dimen name="textSizeTiny">14sp</dimen>
+    <dimen name="textSizeSmall">16sp</dimen>
+    <dimen name="textSizeNormal">18sp</dimen>
+    <dimen name="textSizeLarge">20sp</dimen>
+    <dimen name="textSizeXLarge">26sp</dimen>
+    <dimen name="textSizeHuge">32sp</dimen>
+
+    <!-- Icons and images -->
+    <dimen name="iconSizeBig">48dp</dimen>
+    <dimen name="bnvScheduleIconSize">88dp</dimen>
+    <dimen name="emptyViewImageSize">100dp</dimen>
+    <dimen name="stubImageSize">200dp</dimen>
+
+    <!-- Dialogs -->
+    <dimen name="dialogCoordinatorWithRecyclerHeight">400dp</dimen>
+    <dimen name="dialogChangeQuestsHeight">500dp</dimen>
+
+    <!-- Max dimensions -->
+    <dimen name="rvScheduleSummaryItemMaxWidth">180dp</dimen>
+    <dimen name="questOnTaskMaxWidth">250dp</dimen>
+
+    <!-- Bound dimensions -->
+    <dimen name="questViewLeftRippleCorners">60dp</dimen>
+    <dimen name="questViewHeight">120dp</dimen>
+
+    <!-- Other -->
+    <dimen name="schedulePaddingBottom">@dimen/hugeMargin</dimen>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Margins -->
+    <dimen name="tinyMargin">4dp</dimen>
+    <dimen name="smallMargin">8dp</dimen>
+    <dimen name="mediumMargin">12dp</dimen>
+    <dimen name="normalMargin">16dp</dimen>
+    <dimen name="largeMargin">24dp</dimen>
+    <dimen name="xLargeMargin">32dp</dimen>
+    <dimen name="xxxLargeMargin">64dp</dimen>
+    <dimen name="hugeMargin">96dp</dimen>
+    <dimen name="giantMargin">160dp</dimen>
+
+    <!-- Corners -->
+    <dimen name="smallCorners">4dp</dimen>
+    <dimen name="normalCorners">8dp</dimen>
+    <dimen name="largeCorners">16dp</dimen>
+
+    <!-- Elevations -->
+    <dimen name="dayElevation">2dp</dimen>
+    <dimen name="sheetElevation">4dp</dimen>
+    <dimen name="barsElevation">8dp</dimen>
+    <dimen name="bnvElevation">12dp</dimen>
+
+    <!-- Dialogs -->
+    <dimen name="dialogCoordinatorWithRecyclerHeight">400dp</dimen>
+    <dimen name="dialogChangeQuestsHeight">500dp</dimen>
+
+    <!-- Icons and images -->
+    <dimen name="iconSizeTiny">16dp</dimen>
+    <dimen name="iconSizeSmall">24dp</dimen>
+    <dimen name="iconSizeMedium">32dp</dimen>
+    <dimen name="scheduleWidgetIconSize">42dp</dimen>
+    <dimen name="iconSizeBig">48dp</dimen>
+    <dimen name="heapIconSize">72dp</dimen>
+    <dimen name="bnvScheduleIconSize">88dp</dimen>
+    <dimen name="emptyViewImageSize">100dp</dimen>
+    <dimen name="stubImageSize">200dp</dimen>
+
+    <!-- Text -->
+    <dimen name="textSizeTiniest">10sp</dimen>
+    <dimen name="textSizeTiny">12sp</dimen>
+    <dimen name="textSizeSmall">14sp</dimen>
+    <dimen name="textSizeNormal">16sp</dimen>
+    <dimen name="textSizeLarge">18sp</dimen>
+    <dimen name="textSizeXLarge">24sp</dimen>
+    <dimen name="textSizeHuge">30sp</dimen>
+
+    <!-- Bound dimensions -->
+    <dimen name="scrollbarsCorners">2dp</dimen>
+    <dimen name="scrollbarsWidth">4dp</dimen>
+    <dimen name="actionViewCorners">24dp</dimen>
+    <dimen name="actionViewHeight">48dp</dimen>
+    <dimen name="archiveButtonMarginBottom">152dp</dimen>
+    <dimen name="halfSeekBarHeight">35dp</dimen>
+    <dimen name="seekBarHeight">70dp</dimen>
+    <dimen name="questViewLeftRippleCorners">50dp</dimen>
+    <dimen name="questViewHeight">100dp</dimen>
+
+    <!-- Max dimensions -->
+    <dimen name="rvScheduleSummaryItemMaxWidth">180dp</dimen>
+    <dimen name="questOnTaskMaxWidth">250dp</dimen>
+
+    <!-- Other -->
+    <dimen name="dividerHeight">0.5dp</dimen>
+    <dimen name="scheduleWidgetCounterCircleStrokeWidth">4dp</dimen>
+    <dimen name="questChipCorners">10dp</dimen>
+    <dimen name="emptyDateSize">20dp</dimen>
+    <dimen name="tabLayoutHeight">24dp</dimen>
+    <dimen name="actionImageButtonSize">36dp</dimen>
+    <dimen name="widgetsHeight">60dp</dimen>
+    <dimen name="scheduleSpaceElementHeight">150dp</dimen>
+    <dimen name="schedulePaddingBottom">@dimen/xxxLargeMargin</dimen>
+    <dimen name="closedTaskDialogRvHeight">240dp</dimen>
+    <dimen name="imageButtonSize">48dp</dimen>
+    <dimen name="closedTaskActionHeight">30dp</dimen>
+
+</resources>

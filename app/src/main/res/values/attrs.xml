@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ActionView">
+        <attr name="icon" format="reference" />
+        <attr name="title" format="string" />
+        <attr name="state" format="enum">
+            <enum name="hidden" value="0" />
+            <enum name="shown" value="1" />
+        </attr>
+        <attr name="gravity" format="enum">
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

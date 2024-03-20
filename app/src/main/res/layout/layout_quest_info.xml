@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/infoContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/tasks"
+        android:layout_width="@dimen/iconSizeTiny"
+        android:layout_height="@dimen/iconSizeTiny"
+        android:contentDescription="@string/cdColoredNoteIcon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_colored_task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tasksCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tinyMargin"
+        android:textColor="@color/textPrimaryWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tasks"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="15" />
+
+    <ImageView
+        android:id="@+id/notes"
+        android:layout_width="@dimen/iconSizeTiny"
+        android:layout_height="@dimen/iconSizeTiny"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:contentDescription="@string/cdColoredNoteTasks"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_colored_note"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tasksCount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="0dp" />
+
+    <TextView
+        android:id="@+id/notesCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tinyMargin"
+        android:textColor="@color/textPrimaryWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/notes"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="15" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

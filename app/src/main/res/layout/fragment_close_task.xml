@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/largeMargin"
+        android:gravity="center"
+        android:text="@string/finishTaskHint"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textSizeHuge"
+        app:layout_constraintBottom_toTopOf="@id/finishAndCreateNew" />
+
+    <Button
+        android:id="@+id/finishAndCreateNew"
+        style="@style/ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widgetsHeight"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:text="@string/finishAndCreateNew"
+        app:layout_constraintBottom_toTopOf="@id/finishAndCopy" />
+
+    <Button
+        android:id="@+id/finishAndCopy"
+        style="@style/ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widgetsHeight"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:text="@string/finishAndCopy"
+        app:layout_constraintBottom_toTopOf="@id/justFinish" />
+
+    <Button
+        android:id="@+id/justFinish"
+        style="@style/ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widgetsHeight"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/xLargeMargin"
+        android:text="@string/justFinish"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:clipToPadding="false"
+    android:elevation="@dimen/sheetElevation"
+    android:paddingTop="@dimen/normalMargin"
+    android:paddingBottom="@dimen/normalMargin">
+
+    <TextView
+        android:id="@+id/staleTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:layout_marginEnd="@dimen/normalMargin"
+        android:background="@drawable/background_rounded_rect_error"
+        android:maxWidth="@dimen/rvScheduleSummaryItemMaxWidth"
+        android:paddingHorizontal="@dimen/smallMargin"
+        android:textColor="@color/textPrimaryWhite"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toStartOf="@id/center"
+        app:layout_constraintTop_toTopOf="@id/quickTask"
+        tools:text="5 задач просрочено" />
+
+    <TextView
+        android:id="@+id/todayTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:layout_marginEnd="@dimen/normalMargin"
+        android:maxWidth="@dimen/rvScheduleSummaryItemMaxWidth"
+        android:textColor="@color/textPrimaryWhite"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toStartOf="@id/center"
+        app:layout_constraintTop_toBottomOf="@id/staleTasks"
+        tools:text="5 задач на сегодня" />
+
+    <TextView
+        android:id="@+id/futureTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:layout_marginEnd="@dimen/normalMargin"
+        android:maxWidth="@dimen/rvScheduleSummaryItemMaxWidth"
+        android:textColor="@color/textHintWhite"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toStartOf="@id/center"
+        app:layout_constraintTop_toBottomOf="@id/todayTasks"
+        tools:text="70 задач на потом" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/quickTask"
+        style="@style/ButtonWithIcon.Schedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonQuickTask"
+        app:icon="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/quickNote"
+        style="@style/ButtonWithIcon.Schedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonQuickNote"
+        app:icon="@drawable/ic_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/center"
+        app:layout_constraintTop_toBottomOf="@id/quickTask" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/expand"
+        style="@style/ButtonWithIcon.Schedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/menuItemExpand"
+        app:icon="@drawable/ic_expand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/center"
+        app:layout_constraintTop_toBottomOf="@id/quickNote" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/center"
+        app:layout_constraintTop_toBottomOf="@id/expand">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/database"
+            style="@style/ButtonWithIcon.Schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/navDrawerDatabaseTitle"
+            app:icon="@drawable/ic_save" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/collapse"
+            style="@style/ButtonWithIcon.Schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menuItemCollapse"
+            app:icon="@drawable/ic_collapse" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

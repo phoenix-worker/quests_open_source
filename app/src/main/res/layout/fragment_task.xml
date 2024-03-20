@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sheetBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sheetBackground"
+        android:paddingBottom="@dimen/normalMargin"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sheetBackground"
+            app:layout_scrollFlags="scroll"
+            app:menu="@menu/fragment_task"
+            app:title="@string/activeTask"
+            tools:subtitle="Выполнено 5/10" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleInputLayout"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallMargin"
+            android:hint="@string/taskNameHint"
+            app:layout_scrollFlags="scroll">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="3"
+                android:textSize="@dimen/textSizeHuge" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/quest"
+            style="@style/QuestChipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normalMargin"
+            android:layout_marginTop="@dimen/smallMargin"
+            android:background="@drawable/background_quest_on_task"
+            android:gravity="start"
+            android:maxWidth="@dimen/questOnTaskMaxWidth"
+            android:textColor="@color/textSecondaryWhite"
+            android:textSize="@dimen/textSizeSmall"
+            app:layout_scrollFlags="scroll"
+            tools:ignore="TextContrastCheck"
+            tools:text="Уход за домашними животными в длинном увесте" />
+
+        <Button
+            android:id="@+id/date"
+            style="@style/ButtonWithIcon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widgetsHeight"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:backgroundTint="@color/sheetBackground"
+            android:text="@string/buttonDate"
+            app:icon="@drawable/ic_calendar"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintTop_toBottomOf="@id/quests"
+            app:layout_scrollFlags="scroll"
+            tools:text="Когда: 29 февраля 2021" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/normalMargin"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            app:layout_scrollFlags="scroll"
+            app:selectionRequired="false"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipToday"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chipToday" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTomorrow"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chipTomorrow" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDayAfterTomorrow"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chipDayAfterTomorrow" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipWeekLater"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weekLater" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTwoWeeksLater"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/twoWeeksLater" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFourWeeksLater"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fourWeeksLater" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipNextMonday"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nextMonday" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipNextMonth"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nextMonth" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipNextYear"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nextYear" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll">
+
+            <Button
+                android:id="@+id/time"
+                style="@style/ButtonWithIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/widgetsHeight"
+                android:layout_weight="1"
+                android:backgroundTint="@color/sheetBackground"
+                android:text="@string/buttonTime"
+                app:icon="@drawable/ic_time"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintTop_toBottomOf="@id/quests"
+                app:layout_scrollFlags="scroll"
+                tools:text="Во сколько: 09:00" />
+
+            <ImageButton
+                android:id="@+id/clearTime"
+                android:layout_width="@dimen/widgetsHeight"
+                android:layout_height="@dimen/widgetsHeight"
+                android:background="@drawable/ripple_oval_primary"
+                android:contentDescription="@string/cdClearTime"
+                app:srcCompat="@drawable/ic_clear"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <apps.cradle.quests.ui.views.ReminderView
+            android:id="@+id/reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normalMargin"
+            app:layout_scrollFlags="scroll" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll">
+
+            <Button
+                android:id="@+id/deadline"
+                style="@style/ButtonWithIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/widgetsHeight"
+                android:layout_weight="1"
+                android:backgroundTint="@color/sheetBackground"
+                android:text="@string/buttonDate"
+                app:icon="@drawable/ic_deadline"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintTop_toBottomOf="@id/quests"
+                tools:text="Крайний срок: 29 февраля 2021" />
+
+            <ImageButton
+                android:id="@+id/clearDeadline"
+                android:layout_width="@dimen/widgetsHeight"
+                android:layout_height="@dimen/widgetsHeight"
+                android:background="@drawable/ripple_oval_primary"
+                android:contentDescription="@string/cdClearDeadline"
+                app:srcCompat="@drawable/ic_clear"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/taskActionsHint"
+            style="@style/TextViewHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normalMargin"
+            android:layout_marginTop="@dimen/xLargeMargin"
+            android:layout_marginEnd="@dimen/normalMargin"
+            android:text="@string/taskActionsHint"
+            app:layout_scrollFlags="noScroll" />
+
+        <TextView
+            android:id="@+id/taskActionsHintNotEmpty"
+            style="@style/TextViewHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xLargeMargin"
+            android:background="@android:color/white"
+            android:text="@string/taskActionsNotEmptyHint"
+            android:textColor="@color/windowBackground"
+            app:layout_scrollFlags="noScroll" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        style="@style/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        style="@style/FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/xLargeMargin"
+        android:contentDescription="@string/buttonNewAction"
+        android:src="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

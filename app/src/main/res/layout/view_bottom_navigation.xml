@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/scheduleGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <apps.cradle.quests.ui.views.AnalogWatchView
+        android:id="@+id/schedule"
+        android:layout_width="@dimen/bnvScheduleIconSize"
+        android:layout_height="@dimen/bnvScheduleIconSize"
+        android:background="@drawable/ripple_oval_light"
+        android:contentDescription="@string/cdBnvSchedule"
+        android:padding="@dimen/smallMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/scheduleGuideline"
+        app:layout_constraintStart_toStartOf="@id/scheduleGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/questsGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/quests"
+        android:layout_width="@dimen/iconSizeBig"
+        android:layout_height="@dimen/iconSizeBig"
+        android:background="@drawable/ripple_oval_light"
+        android:contentDescription="@string/cdBnvQuests"
+        android:padding="@dimen/smallMargin"
+        android:src="@drawable/ic_database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/questsGuideline"
+        app:layout_constraintStart_toStartOf="@id/questsGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ImageView
+        android:id="@+id/finishedQuests"
+        android:layout_width="@dimen/iconSizeSmall"
+        android:layout_height="@dimen/iconSizeSmall"
+        android:contentDescription="@string/cdFinishedQuests"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_finish"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/quests"
+        app:layout_constraintTop_toTopOf="@id/quests" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/searchGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="@dimen/iconSizeBig"
+        android:layout_height="@dimen/iconSizeBig"
+        android:background="@drawable/ripple_oval_light"
+        android:contentDescription="@string/cdBnvSearch"
+        android:padding="@dimen/smallMargin"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/searchGuideline"
+        app:layout_constraintStart_toStartOf="@id/searchGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+</merge>

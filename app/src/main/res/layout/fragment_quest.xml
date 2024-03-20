@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sheetBackground"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sheetBackground"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:menu="@menu/fragment_quest"
+            app:title="@string/questFragmentTitle"
+            tools:subtitle="в категории 'Личное'" />
+
+        <TextView
+            android:id="@+id/archiveTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallMargin"
+            android:maxLines="3"
+            android:paddingHorizontal="@dimen/normalMargin"
+            android:textColor="@color/textPrimaryWhite"
+            android:textSize="@dimen/textSizeHuge"
+            app:layout_scrollFlags="noScroll"
+            tools:text="Архивный квест" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleInputLayout"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallMargin"
+            android:hint="@string/taskNameHint"
+            app:layout_scrollFlags="noScroll">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="3"
+                android:textColor="@color/textPrimaryWhite"
+                android:textSize="@dimen/textSizeHuge" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/heapHintContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normalMargin"
+            android:layout_marginVertical="@dimen/smallMargin"
+            android:gravity="top"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/heapIconSize"
+                android:layout_height="@dimen/heapIconSize"
+                android:contentDescription="@string/cdHeapImage"
+                android:src="@drawable/image_heap" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/heapQuestHint"
+                android:textColor="@color/textPrimaryWhite"
+                android:textSize="@dimen/textSizeNormal" />
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabLayoutHeight"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:contentDescription="@string/cdTabLayoutQuest" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        style="@style/FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/xLargeMargin"
+        android:contentDescription="@string/cdButtonAdd"
+        android:src="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

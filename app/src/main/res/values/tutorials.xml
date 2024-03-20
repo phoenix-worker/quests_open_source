@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="categoriesDifferentTitle">Разное</string>
+    <string name="userManualQuestTitle">Руководство пользователя</string>
+    <string name="moveTasksTutorialTaskTitle">Смахните задачу ВЛЕВО, чтобы перенести её на другую дату</string>
+    <string name="finishTasksTutorialTaskTitle">Смахните задачу ВПРАВО, чтобы завершить её</string>
+    <string name="taskWithActionsTutorialTaskTitle">Задачу с контрольным списком нельзя завершить, пока в ней не выполнены все действия</string>
+    <string name="taskWithActionsTutorialFirstActionTitle">Научиться двигать задачи</string>
+    <string name="taskWithActionsTutorialSecondActionTitle">Научиться завершать задачи</string>
+    <string name="taskWithActionsTutorialThirdActionTitle">Ознакомиться с контрольным списком</string>
+    <string name="feedbackTutorialTask">Оставьте, пожалуйста, отзыв о приложении в RuStore</string>
+    <string name="transferTasksTutorialTaskTitle">Долгое нажатие на элемент - перемещение. Задачи и материалы можно перемещать между квестами, квесты - между категориями.</string>
+    <string name="tutorialNoteAboutTitle">О приложении</string>
+    <string name="tutorialNoteAboutContent">
+        Ваши пожелания и предложения по развитию приложения можно направлять в отзывы на странице приложения в RuStore или
+        в нашу группу в VK https://vk.com/appscradle, а также на электронную почту apps.cradle@gmail.com.
+        \n\nСамые актуальные новости о развитии этого и других наших приложений можно узнавать из нашего блога в Дзене https://dzen.ru/appscradle
+        \n\nО других наших проектах вы можете почитать на нашем сайте https://apps-cradle.ru
+    </string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/smallMargin"
+        android:background="@drawable/background_sheet_dialog">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/DialogText.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normalMargin"
+            android:layout_marginTop="@dimen/xLargeMargin"
+            android:layout_marginEnd="@dimen/normalMargin"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="У вас нет ни одного квеста" />
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/DialogText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normalMargin"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:layout_marginEnd="@dimen/normalMargin"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:text="Создайте свой первый квест, чтобы добавлять к нему задачи. Один квест может содержать множество задач." />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/TextInputLayout.Dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normalMargin"
+            app:layout_constraintTop_toBottomOf="@id/message"
+            tools:hint="Новый квест">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText"
+                style="@style/TextInputEditText.Dialog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionDone"
+                tools:text="Хвост Ньюс" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/negativeButton"
+            style="@style/Button.DialogSecondary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widgetsHeight"
+            android:layout_marginTop="@dimen/normalMargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/positiveButton"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+            tools:text="Отмена" />
+
+        <Button
+            android:id="@+id/positiveButton"
+            style="@style/Button.DialogPrimary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widgetsHeight"
+            android:layout_marginTop="@dimen/normalMargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toEndOf="@id/negativeButton"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+            tools:text="Создать" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

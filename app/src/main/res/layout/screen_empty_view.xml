@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/emptyViewImageSize"
+        android:layout_height="@dimen/emptyViewImageSize"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/image_empty" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxxLargeMargin"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:layout_marginEnd="@dimen/xxxLargeMargin"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textSizeLarge"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toTopOf="@id/hint"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="Заголовок" />
+
+    <TextView
+        android:id="@+id/hint"
+        style="@style/TextViewHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:gravity="top|center"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="TextContrastCheck"
+        tools:layout_editor_absoluteX="64dp"
+        tools:text="Сообщение" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Button.EmptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:text="@string/buttonDelete"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:layout_marginEnd="@dimen/largeMargin"
+        android:gravity="center"
+        android:text="@string/finishedQuestHintTitle"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textSizeLarge"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toTopOf="@id/hint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/hint"
+        style="@style/TextViewHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:layout_marginEnd="@dimen/largeMargin"
+        android:gravity="top|center"
+        android:text="@string/finishedQuestHintSubtitle"
+        app:layout_constraintBottom_toTopOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/image"
+        style="@style/Button.EmptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:layout_marginBottom="@dimen/normalMargin"
+        android:text="@string/buttonToArchive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_task_item"
+    android:elevation="@dimen/sheetElevation">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:textColor="@color/textHintWhite"
+        android:textSize="@dimen/textSizeSmall"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="15 апреля 2023 в 9:00" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normalMargin"
+        android:textColor="@color/textHintWhite"
+        android:textSize="@dimen/textSizeSmall"
+        app:layout_constraintBottom_toTopOf="@id/questInfo"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        app:layout_goneMarginBottom="@dimen/normalMargin"
+        tools:ignore="TextContrastCheck"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="Ремонт электрики в цепи фонарей тормозов (3/3)" />
+
+    <TextView
+        android:id="@+id/questInfo"
+        style="@style/QuestChipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:layout_marginBottom="@dimen/normalMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="TextContrastCheck"
+        tools:text="Уход за домашними животными" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

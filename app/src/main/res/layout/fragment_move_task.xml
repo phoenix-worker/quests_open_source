@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/largeMargin"
+        android:gravity="center"
+        android:text="@string/moveTaskHint"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textSizeHuge"
+        app:layout_constraintBottom_toTopOf="@id/today" />
+
+    <Button
+        android:id="@+id/today"
+        style="@style/ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widgetsHeight"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:text="@string/moveTaskToToday"
+        app:layout_constraintBottom_toTopOf="@id/tomorrow" />
+
+    <Button
+        android:id="@+id/tomorrow"
+        style="@style/ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widgetsHeight"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:text="@string/moveTaskToTomorrow"
+        app:layout_constraintBottom_toTopOf="@id/dayAfterTomorrow" />
+
+    <Button
+        android:id="@+id/dayAfterTomorrow"
+        style="@style/ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widgetsHeight"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:text="@string/moveTaskToDayAfterTomorrow"
+        app:layout_constraintBottom_toTopOf="@id/nextWeek" />
+
+    <Button
+        android:id="@+id/nextWeek"
+        style="@style/ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widgetsHeight"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:text="@string/moveTaskToNextWeek"
+        app:layout_constraintBottom_toTopOf="@id/anotherDate" />
+
+    <Button
+        android:id="@+id/anotherDate"
+        style="@style/ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widgetsHeight"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/xLargeMargin"
+        android:text="@string/moveTaskToAnotherDate"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

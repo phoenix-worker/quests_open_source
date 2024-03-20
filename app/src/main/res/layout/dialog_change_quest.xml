@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/windowBackground">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialogChangeQuestsHeight"
+        android:layout_margin="@dimen/smallMargin"
+        android:background="@drawable/background_sheet_dialog">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_dialog_app_bar"
+            app:liftOnScroll="true">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/DialogText.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:layout_marginTop="@dimen/xLargeMargin"
+                android:layout_marginEnd="@dimen/normalMargin"
+                android:layout_marginBottom="@dimen/normalMargin"
+                android:text="@string/cqdTransferTitle" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                style="@style/TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabLayoutHeight"
+                android:layout_marginTop="@dimen/smallMargin"
+                android:contentDescription="@string/cdCategoriesTabLayout" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/widgetsHeight"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+        <include
+            android:id="@+id/emptyView"
+            layout="@layout/screen_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/widgetsHeight"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+        <Button
+            android:id="@+id/buttonHeap"
+            style="@style/Button.DialogSecondary.Single"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widgetsHeight"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/xLargeMargin"
+            android:scaleType="centerInside"
+            android:text="@string/cqdTransferButtonText"
+            app:icon="@drawable/icon_heap_button"
+            app:iconGravity="textStart"
+            app:iconTint="@null"
+            tools:ignore="VisualLintButtonSize" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

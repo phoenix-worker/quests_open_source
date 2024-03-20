@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_task_item"
+    android:elevation="@dimen/sheetElevation"
+    android:paddingBottom="@dimen/normalMargin">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:textColor="@color/textSecondaryWhite"
+        android:textSize="@dimen/textSizeSmall"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="15 апреля 2023, вторник" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:layout_marginEnd="@dimen/smallMargin"
+        android:textColor="@color/textPrimaryWhite"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toStartOf="@id/actions"
+        app:layout_constraintStart_toEndOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        app:layout_goneMarginTop="@dimen/normalMargin"
+        tools:text="Почесать кошечку" />
+
+    <TextView
+        android:id="@+id/questInfo"
+        style="@style/QuestChipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:layout_marginEnd="@dimen/normalMargin"
+        app:layout_constraintStart_toEndOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="TextContrastCheck"
+        tools:text="Уход за домашними животными" />
+
+    <TextView
+        android:id="@+id/deadline"
+        style="@style/QuestChipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:background="@drawable/background_chips_accent"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/questInfo"
+        tools:ignore="TextContrastCheck"
+        tools:text="ещё 3 дня" />
+
+    <TextView
+        android:id="@+id/actions"
+        style="@style/QuestChipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:layout_marginEnd="@dimen/normalMargin"
+        android:background="@drawable/background_chips_white"
+        android:textColor="@color/windowBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        app:layout_goneMarginTop="@dimen/normalMargin"
+        tools:text="3/7" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:textColor="@color/textPrimaryWhite"
+        android:textSize="@dimen/textSizeXLarge"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title"
+        tools:text="19:00" />
+
+    <TextView
+        android:id="@+id/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tinyMargin"
+        android:drawablePadding="@dimen/tinyMargin"
+        android:gravity="center"
+        android:textColor="@color/textHintWhite"
+        android:textSize="@dimen/textSizeTiniest"
+        app:drawableStartCompat="@drawable/ic_notification_active"
+        app:drawableTint="@color/textHintWhite"
+        app:layout_constraintStart_toStartOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        tools:ignore="TextContrastCheck"
+        tools:text="за 30 мин" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

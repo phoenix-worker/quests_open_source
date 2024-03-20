@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingVertical="@dimen/normalMargin">
+
+    <apps.cradle.quests.ui.views.ActionView
+        android:id="@+id/action"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/actionViewHeight"
+        android:layout_gravity="start"
+        app:gravity="left"
+        app:icon="@drawable/ic_colored_task"
+        app:state="hidden"
+        app:title="@string/tasksDividerText" />
+
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/reminder5Min"
+        style="@style/FilterChipStyle.Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chipReminder5Min" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/reminder10Min"
+        style="@style/FilterChipStyle.Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chipReminder10Min" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/reminder15Min"
+        style="@style/FilterChipStyle.Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chipReminder15Min" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/reminder30Min"
+        style="@style/FilterChipStyle.Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chipReminder30Min" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/reminder1Hour"
+        style="@style/FilterChipStyle.Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chipReminder1Hour" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/reminder2Hours"
+        style="@style/FilterChipStyle.Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chipReminder2Hours" />
+
+</merge>

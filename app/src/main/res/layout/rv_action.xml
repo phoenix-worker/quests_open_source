@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/checkbox"
+        android:layout_width="@dimen/actionImageButtonSize"
+        android:layout_height="@dimen/actionImageButtonSize"
+        android:background="@drawable/background_action_checkbox_unchecked"
+        android:contentDescription="@string/cdCheckbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_done"
+        app:tint="@color/textHintWhite" />
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="@dimen/actionImageButtonSize"
+        android:layout_height="@dimen/actionImageButtonSize"
+        android:background="@drawable/ripple_oval_primary"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close"
+        app:tint="@color/textHintWhite"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/title"
+        style="@style/TextInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginEnd="@dimen/smallMargin"
+        android:imeOptions="actionDone"
+        android:inputType="text|textMultiLine"
+        android:textSize="@dimen/textSizeLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/delete"
+        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Добавить нижнее меню" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

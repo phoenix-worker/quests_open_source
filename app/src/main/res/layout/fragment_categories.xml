@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windowBackground"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="noScroll"
+            app:menu="@menu/fragment_categories"
+            app:navigationIcon="@null"
+            app:title="@string/fragmentCategoriesTitle"
+            tools:subtitle="29 квестов активно" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabLayoutHeight"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:contentDescription="@string/cdCategoriesTabLayout">
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <include
+        android:id="@+id/emptyView"
+        layout="@layout/screen_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:visibility="visible" />
+
+    <apps.cradle.quests.ui.views.ActionView
+        android:id="@+id/archive"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/actionViewHeight"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/archiveButtonMarginBottom"
+        android:visibility="gone"
+        app:icon="@drawable/image_archive"
+        app:title="@string/buttonArchive" />
+
+    <apps.cradle.quests.ui.views.ActionView
+        android:id="@+id/heap"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/actionViewHeight"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/hugeMargin"
+        app:icon="@drawable/image_heap"
+        app:title="@string/buttonHeap" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/newQuest"
+        style="@style/FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/hugeMargin"
+        android:contentDescription="@string/buttonNewQuest"
+        android:src="@drawable/ic_add"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

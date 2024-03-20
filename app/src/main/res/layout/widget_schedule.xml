@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/normalMargin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables,UselessParent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/scheduleWidgetIconSize"
+            android:layout_height="@dimen/scheduleWidgetIconSize"
+            android:src="@drawable/image_sunbed"
+            android:visibility="gone"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="@dimen/scheduleWidgetIconSize"
+            android:layout_height="@dimen/scheduleWidgetIconSize"
+            android:background="@drawable/background_circle_green"
+            android:gravity="center"
+            android:textColor="@color/textPrimaryWhite"
+            android:textSize="@dimen/textSizeXLarge"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:ignore="ContentDescription,TextSizeCheck"
+            tools:text="9+"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/textPrimaryWhite"
+                android:textSize="@dimen/textSizeNormal"
+                android:textStyle="bold"
+                tools:text="Нет задач на сегодня" />
+
+            <TextView
+                android:id="@+id/stale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/largeMargin"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/colorError"
+                android:textSize="@dimen/textSizeSmall"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:text="2 задачи просрочены" />
+
+            <TextView
+                android:id="@+id/future"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/largeMargin"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/textHintWhite"
+                android:textSize="@dimen/textSizeSmall"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:ignore="TextContrastCheck"
+                tools:text="2 задачи на потом" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

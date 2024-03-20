@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="maxTitleTextLength">150</integer>
+    <integer name="fragmentTransitionAnimationTime">200</integer>
+    <integer name="noteTextViewMaxLines">10</integer>
+</resources>

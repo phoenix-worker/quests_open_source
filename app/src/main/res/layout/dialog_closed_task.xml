@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/smallMargin"
+        android:background="@drawable/background_sheet_dialog"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            style="@style/DialogText.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/largeMargin"
+            android:layout_marginTop="@dimen/xLargeMargin"
+            android:layout_marginEnd="@dimen/normalMargin"
+            android:gravity="center"
+            android:text="@string/dialogClosedTaskTitle"
+            android:textColor="@color/textPrimaryWhite"
+            app:layout_scrollFlags="noScroll" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/DialogText.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/largeMargin"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:layout_marginEnd="@dimen/normalMargin"
+            android:gravity="start"
+            android:textColor="@color/textHintWhite"
+            android:textStyle="bold"
+            app:layout_scrollFlags="noScroll"
+            tools:ignore="TextContrastCheck"
+            tools:text="Техническое обслуживание № 1" />
+
+        <TextView
+            android:id="@+id/deadline"
+            style="@style/DialogText.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/largeMargin"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:layout_marginEnd="@dimen/normalMargin"
+            android:gravity="start"
+            android:textColor="@color/textHintWhite"
+            android:textSize="@dimen/textSizeSmall"
+            android:textStyle="normal"
+            app:layout_scrollFlags="noScroll"
+            tools:ignore="TextContrastCheck"
+            tools:text="Крайний срок: 15 июля 2023" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/DialogText.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/largeMargin"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:layout_marginEnd="@dimen/normalMargin"
+            android:layout_marginBottom="@dimen/normalMargin"
+            android:gravity="start"
+            android:textColor="@color/textHintWhite"
+            android:textSize="@dimen/textSizeSmall"
+            android:textStyle="normal"
+            app:layout_scrollFlags="noScroll"
+            tools:ignore="TextContrastCheck"
+            tools:text="14 июля 2023 в 08:30" />
+
+        <TextView
+            android:id="@+id/questInfo"
+            style="@style/QuestChipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/largeMargin"
+            android:layout_marginEnd="@dimen/normalMargin"
+            android:layout_marginBottom="@dimen/normalMargin"
+            app:layout_constraintStart_toEndOf="@id/time"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_scrollFlags="noScroll"
+            tools:ignore="TextContrastCheck"
+            tools:text="Уход за домашними животными" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            style="@style/RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/closedTaskDialogRvHeight"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:ignore="TextSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:clipToPadding="false"
+            android:elevation="@dimen/barsElevation"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/smallMargin"
+            android:paddingBottom="@dimen/largeMargin">
+
+            <ImageButton
+                android:id="@+id/resume"
+                style="@style/IconImageButton"
+                android:layout_width="@dimen/imageButtonSize"
+                android:layout_height="@dimen/imageButtonSize"
+                android:layout_marginEnd="@dimen/tinyMargin"
+                android:contentDescription="@string/buttonResume"
+                android:src="@drawable/ic_resume" />
+
+            <ImageButton
+                android:id="@+id/copy"
+                style="@style/IconImageButton"
+                android:layout_width="@dimen/imageButtonSize"
+                android:layout_height="@dimen/imageButtonSize"
+                android:layout_marginStart="@dimen/tinyMargin"
+                android:layout_marginEnd="@dimen/tinyMargin"
+                android:contentDescription="@string/buttonCopy"
+                android:src="@drawable/ic_copy" />
+
+            <ImageButton
+                android:id="@+id/delete"
+                style="@style/IconImageButton"
+                android:layout_width="@dimen/imageButtonSize"
+                android:layout_height="@dimen/imageButtonSize"
+                android:layout_marginStart="@dimen/tinyMargin"
+                android:layout_marginEnd="@dimen/largeMargin"
+                android:background="@drawable/background_image_button_error"
+                android:contentDescription="@string/buttonDelete"
+                android:src="@drawable/ic_delete" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

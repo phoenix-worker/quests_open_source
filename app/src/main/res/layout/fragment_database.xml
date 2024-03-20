@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/fragmentDatabaseTitle" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stubImageSize"
+            android:scaleType="centerInside"
+            android:src="@drawable/image_database"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/infoExport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normalMargin"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:text="@string/databaseInfoExport"
+            android:textAppearance="@style/InfoTextTextAppearance"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+        <apps.cradle.quests.ui.views.ActionView
+            android:id="@+id/buttonExport"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/actionViewHeight"
+            android:layout_marginTop="@dimen/normalMargin"
+            app:icon="@drawable/ic_export"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoExport"
+            app:title="@string/buttonDatabaseExport" />
+
+        <TextView
+            android:id="@+id/infoImport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normalMargin"
+            android:layout_marginTop="@dimen/xLargeMargin"
+            android:text="@string/databaseInfoImport"
+            android:textAppearance="@style/InfoTextTextAppearance"
+            app:layout_constraintTop_toBottomOf="@id/buttonExport" />
+
+        <apps.cradle.quests.ui.views.ActionView
+            android:id="@+id/buttonImport"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/actionViewHeight"
+            android:layout_marginTop="@dimen/normalMargin"
+            android:layout_marginBottom="@dimen/xxxLargeMargin"
+            app:icon="@drawable/ic_import"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoImport"
+            app:title="@string/buttonDatabaseImport" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_task_item"
+    android:elevation="@dimen/sheetElevation"
+    android:foreground="@drawable/ripple_note"
+    android:orientation="vertical"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/largeMargin">
+
+        <ImageView
+            android:id="@+id/noteIcon"
+            android:layout_width="@dimen/iconSizeSmall"
+            android:layout_height="@dimen/iconSizeSmall"
+            android:layout_marginStart="@dimen/largeMargin"
+            android:contentDescription="@string/cdColoredNoteIcon"
+            android:src="@drawable/ic_colored_note"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/smallMargin"
+            android:layout_marginEnd="@dimen/largeMargin"
+            android:textColor="@color/textPrimaryWhite"
+            android:textSize="@dimen/textSizeNormal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/noteIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Заголовок заметки очень преочень длинный, что не помещается в одну строку" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="@integer/noteTextViewMaxLines"
+        android:paddingHorizontal="@dimen/largeMargin"
+        android:paddingVertical="@dimen/normalMargin"
+        android:textColor="@color/textSecondaryWhite"
+        android:textSize="@dimen/textSizeNormal"
+        tools:text="Заголовок заметки" />
+
+    <LinearLayout
+        android:id="@+id/questInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/largeMargin"
+        android:paddingBottom="@dimen/largeMargin"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/archiveIcon"
+            android:layout_width="@dimen/iconSizeSmall"
+            android:layout_height="@dimen/iconSizeSmall"
+            android:layout_marginEnd="@dimen/smallMargin"
+            android:contentDescription="@string/cdArchiveIcon"
+            android:src="@drawable/image_archive" />
+
+        <TextView
+            android:id="@+id/quest"
+            style="@style/QuestChipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="TextContrastCheck"
+            tools:text="Уход за домашними животными" />
+
+    </LinearLayout>
+
+</LinearLayout>

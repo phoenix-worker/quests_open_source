@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="windowBackground">@color/gray900</color> <!-- Gray 900 -->
+    <color name="colorPrimary">#37474F</color> <!-- Blue Gray 800 -->
+    <color name="colorAccent">#FF8A65</color> <!-- Teal 300 -->
+    <color name="colorError">#EF5350</color>
+    <color name="sheetBackground">#272727</color>
+    <color name="green600">#43A047</color>
+    <color name="amber600">#FFB300</color>
+    <color name="colorAccentSecondary">#A6FF8A65</color>
+    <color name="amber800">#FF8F00</color>
+    <color name="gray800">#424242</color>
+    <color name="gray850">#323232</color>
+    <color name="gray900">#212121</color>
+    <color name="textPrimaryWhite">#ffffff</color>
+    <color name="textSecondaryWhite">#A6FFFFFF</color>
+    <color name="textHintWhite">#4DFFFFFF</color>
+    <color name="rippleTransparentWhite10">#1AFFFFFF</color>
+    <color name="rippleTransparentWhite30">#4DFFFFFF</color>
+    <color name="buttonBackgroundTint">#4D37474F</color>
+    <color name="elevatedButtonBackgroundTint">@color/sheetBackground</color>
+    <color name="scrollbarsColor">#1AFFFFFF</color>
+    <color name="holiday">@color/colorError</color>
+    <color name="textHintBlack">#80000000</color>
+    <color name="bnvUnselected">#646464</color>
+    <color name="shadowColor">#4D000000</color>
+</resources>
